@@ -5,8 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>我是主菜单</title>
+<script src="${pageContext.request.contextPath}/resources/js/jquery-1.7.2.js" type="text/javascript"></script>  
 </head>
 <body>
-	${message}
+	消息：${message}
 </body>
 </html>
