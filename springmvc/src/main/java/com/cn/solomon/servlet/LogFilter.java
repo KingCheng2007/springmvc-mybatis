@@ -11,7 +11,12 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 public class LogFilter implements Filter{
+	
+	private Logger logger = LogManager.getLogger("LogFilter");
 	
 	private FilterConfig config;
 
@@ -20,7 +25,7 @@ public class LogFilter implements Filter{
 	 */
 	public void init(FilterConfig config) throws ServletException {
 		this.config = config;
-		System.out.println("呵呵");
+		logger.info("this.config="+config);
 	}
 
 	//这个方法是Filter的核心方法
@@ -28,25 +33,24 @@ public class LogFilter implements Filter{
 			throws IOException, ServletException {
 		ServletContext context = this.config.getServletContext() ;
 		long begin = System.currentTimeMillis();
-		
 		//输出过滤信息
-		System.out.println("开始过滤...");
+		logger.info("开始过滤...");
 		HttpServletRequest hRequest = (HttpServletRequest) request;
-		System.out.println("Filter已经获取到用户请求的地址："+hRequest.getServletPath());
+		logger.info("Filter已经获取到用户请求的地址："+hRequest.getServletPath());
 		
-		System.out.println("getServerInfo的信息："+context.getServerInfo());
+		logger.info("getServerInfo的信息："+context.getServerInfo());
 		//处理完成后，交给下个Filter或者Servlet处理
 		chain.doFilter(hRequest, response);
 		
 		//对服务器的响应进行处理
 		long end = System.currentTimeMillis();
-		System.out.println("过滤结束...");
-		System.out.println("请求被定为到："+hRequest.getRequestURI()+";所花费的时间为："+(end-begin));
+		logger.info("过滤结束...");
+		logger.info("请求被定为到："+hRequest.getRequestURI()+";所花费的时间为："+(end-begin));
 	}
 
 	public void destroy() {
 		this.config = null ;
-		
+		logger.info("destory...");
 	}
 
 }
