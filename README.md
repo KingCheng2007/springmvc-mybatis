@@ -9,4 +9,5 @@ GIT for Windows地址：https://git-for-windows.github.io/
 
 在Eclipse中使用workspace 使用编码UTF-8即可
 
-Test
+Eclipse中使用GIT
+http://yufenfei.iteye.com/blog/1750124/
