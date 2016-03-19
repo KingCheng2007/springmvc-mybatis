@@ -29,5 +29,7 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
-	<bean class="com.cn.solomon.controller.LoginController"/>  
+	<context:component-scan base-package="com.cn.solomon.controller" /> 
+	
+	<mvc:resources mapping="/resources/**" location="/resources/" />
 </beans>
