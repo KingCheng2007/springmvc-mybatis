@@ -16,6 +16,8 @@ import org.apache.log4j.Logger;
 
 public class LogFilter implements Filter{
 	
+	private int comingCount = 0;
+	
 	private Logger logger = LogManager.getLogger("LogFilter");
 	
 	private FilterConfig config;
@@ -31,10 +33,11 @@ public class LogFilter implements Filter{
 	//这个方法是Filter的核心方法
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
+		comingCount++;
 		ServletContext context = this.config.getServletContext() ;
 		long begin = System.currentTimeMillis();
 		//输出过滤信息
-		logger.info("开始过滤...");
+		logger.info("开始过滤"+this.comingCount+"...");
 		HttpServletRequest hRequest = (HttpServletRequest) request;
 		logger.info("Filter已经获取到用户请求的地址："+hRequest.getServletPath());
 		
@@ -44,7 +47,7 @@ public class LogFilter implements Filter{
 		
 		//对服务器的响应进行处理
 		long end = System.currentTimeMillis();
-		logger.info("过滤结束...");
+		logger.info("过滤结束"+this.comingCount+"...");
 		logger.info("请求被定为到："+hRequest.getRequestURI()+";所花费的时间为："+(end-begin));
 	}
 
