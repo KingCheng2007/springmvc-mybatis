@@ -7,7 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class LoginController {
 
-	@RequestMapping("login")
+	@RequestMapping("/login")
 	public ModelAndView doLogin(){
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("message","HelloWorld");
