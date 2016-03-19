@@ -20,6 +20,7 @@ public class LogFilter implements Filter{
 	 */
 	public void init(FilterConfig config) throws ServletException {
 		this.config = config;
+		System.out.println("呵呵");
 	}
 
 	//这个方法是Filter的核心方法
