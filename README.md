@@ -8,3 +8,5 @@ GIT for Windows地址：https://git-for-windows.github.io/
 [WARNING] Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
 
 在Eclipse中使用workspace 使用编码UTF-8即可
+
+Test
