@@ -29,3 +29,7 @@ Spring的AbstractUrlHandlerMapping使用：最长匹配优先；
 如请求为“/long/long” 将匹配第一个“/long/long”，但请求“/long/acd” 则将匹配 “/long/**”，如请求“/long/aa/abc”则匹配“/long/**/abc”，如请求“/abc”则将匹配“/**”
 
 提示：推荐能使用servlet规范中的过滤器Filter实现的功能就用Filter实现，因为HandlerInteceptor只有在Spring Web MVC环境下才能使用，因此Filter是最通用的、最先应该使用的。如登录这种拦截器最好使用Filter来实现。
+
+Mybatis的常用的网站
+Mybatis支持saveOrupdate的处理方式
+http://blog.csdn.net/isea533/article/details/45578415
