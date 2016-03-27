@@ -1,6 +1,7 @@
 package com.cn.solomon.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +12,7 @@ import com.cn.solomon.service.ISysUserService;
 @Qualifier("sysUserService")
 public class SysUserServiceImpl implements ISysUserService{
 	
-	@Autowired
+	@Resource
 	private ISysUserMapper sysUserMapper;
 	
 	public SysUser getUser(String id) {

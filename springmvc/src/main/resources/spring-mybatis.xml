@@ -45,9 +45,10 @@
 	<!-- dao接口所在包名，spring会自动找到其下的类 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="com.cn.solomon.mapper"></property>
-		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
 	</bean>
-	<!-- 事物管理器 transaction manager,use JtaTransactionManager for global tx -->
+	
+	<!-- 事物管理器 -->
 	<bean id="transactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource"></property>

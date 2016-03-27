@@ -20,7 +20,7 @@ public class TestMyBatis {
 	private static Logger logger = Logger.getLogger(TestMyBatis.class);
 	// private ApplicationContext ac = null;
 	@Resource
-	private ISysUserService userService = null;
+	private ISysUserService sysUserService = null;
 
 	// @Before
 	// public void before() {
@@ -30,7 +30,7 @@ public class TestMyBatis {
 
 	@Test
 	public void test1() {
-		SysUser user = userService.getUser("1");
+		SysUser user = sysUserService.getUser("1");
 		// System.out.println(user.getUserName());
 		// logger.info("值："+user.getUserName());
 		logger.info(JSON.toJSONString(user));
