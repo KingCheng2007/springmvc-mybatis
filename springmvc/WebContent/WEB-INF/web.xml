@@ -5,6 +5,21 @@
 	id="WebApp_ID" version="3.0">
 	<display-name>springmvc</display-name>
 	
+	 <!--Spring监听器 -->  
+    <listener>  
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>  
+    </listener> 
+    
+    <!-- 配置过滤器 -->
+	<filter>
+		<filter-name>log</filter-name>
+		<filter-class>com.cn.solomon.servlet.LogFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>log</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
 	<!-- Spring和mybatis的配置文件 -->  
     <context-param>  
         <param-name>contextConfigLocation</param-name>  
@@ -25,11 +40,6 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	
-	
-	 <!-- Spring监听器 -->  
-    <listener>  
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>  
-    </listener> 
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 		<welcome-file>index.htm</welcome-file>
