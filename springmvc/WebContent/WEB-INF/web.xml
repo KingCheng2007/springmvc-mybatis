@@ -4,6 +4,12 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	id="WebApp_ID" version="3.0">
 	<display-name>springmvc</display-name>
+	
+	<!-- Spring和mybatis的配置文件 -->  
+    <context-param>  
+        <param-name>contextConfigLocation</param-name>  
+        <param-value>classpath:spring-mybatis.xml</param-value>  
+    </context-param>  
 	<!-- 配置过滤器 -->
 	<filter>
 		<filter-name>log</filter-name>
@@ -12,8 +18,12 @@
 	<filter-mapping>
 		<filter-name>log</filter-name>
 		<url-pattern>/*</url-pattern>
-		
 	</filter-mapping>
+	
+	 <!-- Spring监听器 -->  
+    <listener>  
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>  
+    </listener> 
 	<!-- 配置Servlet -->
 	<servlet>
 		<servlet-name>springmvc</servlet-name>
