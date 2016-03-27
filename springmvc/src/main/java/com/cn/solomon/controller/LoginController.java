@@ -15,7 +15,7 @@ public class LoginController {
 
 	@RequestMapping("/login")
 	public ModelAndView doLogin() {
-		SysUser user = sysUserService.getUser("1");
+		SysUser user = sysUserService.getUser("2");
 		System.out.println(user.getUsername());
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("message", "HelloWorld");

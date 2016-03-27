@@ -12,7 +12,7 @@
 		age as age,
 		sex as sex
 		from
-		user_t
+		user_t where id=#{id,jdbcType=VARCHAR}
 	</select>
 	
 </mapper>
