@@ -80,9 +80,25 @@ public class Complex {
 		splitWord(txt,false);
 	}
 	
+	private String[] splitStrs(String words){
+		String split = "#KKK#";
+		String[] strings={};
+		try {
+			String s = segWords(words, split);
+			strings = s.split(split);
+		} catch (IOException e) {
+			strings[0] = words;
+			return strings;
+		}
+		return strings;
+	}
+	
 	public static void main(String[] args) throws IOException {
 		String words = "我的名字叫做毛泽东";
-		new Complex().splitSimpleWord(words);
+		String[] aStrings =  new Complex().splitStrs(words);
+		for(String tmp:aStrings){
+			System.out.println(tmp);
+		}
 	}
 
 }
