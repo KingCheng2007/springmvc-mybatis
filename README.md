@@ -42,3 +42,5 @@ http://blog.csdn.net/collonn/article/details/39259227
 综合博客 http://www.cnblogs.com/Leo_wl/p/3530464.html
 
 myBaits 深入浅出：http://blog.csdn.net/hupanfeng/article/details/9068003/
+
+浅浅读源码show:http://haohaoxuexi.iteye.com/
