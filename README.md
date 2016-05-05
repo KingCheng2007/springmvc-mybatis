@@ -46,3 +46,5 @@ myBaits 深入浅出：http://blog.csdn.net/hupanfeng/article/details/9068003/
 浅浅读源码show:http://haohaoxuexi.iteye.com/
 
 深度解析源码：http://www.open-open.com/lib/view/open1363572227609.html
+
+拥抱变化个人网站：http://hugnew.com
