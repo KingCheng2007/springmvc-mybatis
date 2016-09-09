@@ -17,7 +17,7 @@ import com.cn.solomon.service.ISysUserService;
 @ContextConfiguration(locations = { "classpath:spring-mybatis.xml" })
 
 public class TestMyBatis {
-	private static Logger logger = Logger.getLogger(TestMyBatis.class);
+	private final Logger logger = Logger.getLogger(getClass());
 	// private ApplicationContext ac = null;
 	@Resource
 	private ISysUserService sysUserService = null;
