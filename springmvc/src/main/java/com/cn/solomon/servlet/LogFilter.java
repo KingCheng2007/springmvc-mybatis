@@ -11,12 +11,11 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class LogFilter implements Filter{
 	
-	Logger logger  = LogManager.getLogger("logFilter");
+	Logger logger  = Logger.getLogger(getClass());
 	
 	private int comingCount = 0;
 	
@@ -27,6 +26,7 @@ public class LogFilter implements Filter{
 	 */
 	public void init(FilterConfig config) throws ServletException {
 		this.config = config;
+		logger.info("logfilter init..."+config);
 	}
 
 	//这个方法是Filter的核心方法

@@ -9,5 +9,6 @@
 </head>
 <body>
 	消息：${message}
+	<a href="sysuser/list">查看所有用户信息</a>
 </body>
 </html>

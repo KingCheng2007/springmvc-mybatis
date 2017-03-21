@@ -1,6 +1,8 @@
 
 package snippet;
 
+import java.util.Map;
+
 import javax.annotation.Resource;
 
 import org.apache.log4j.Logger;
@@ -30,6 +32,11 @@ public class TestMyBatis {
 
 	@Test
 	public void test1() {
+		Map<String,String> m = System.getenv();
+		for(String m1 :m.keySet()){
+			System.out.println(m1+"<>"+m.get(m1));
+		}
+		logger.info(System.getenv("myweb.root"));
 		SysUser user = sysUserService.getUser("1");
 		// System.out.println(user.getUserName());
 		// logger.info("值："+user.getUserName());

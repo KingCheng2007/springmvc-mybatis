@@ -15,4 +15,28 @@
 		user_t where id=#{id,jdbcType=VARCHAR}
 	</select>
 	
+	<select id="selectUserByName" resultType="SysUser">
+		select id as id,
+		user_name as
+		username,
+		password as
+		password,
+		age as age,
+		sex as sex
+		from
+		user_t where user_name=#{userName,jdbcType=VARCHAR}
+	</select>
+	
+	<select id="selectUsers" resultType="SysUser">
+		select id as id,
+		user_name as
+		username,
+		password as
+		password,
+		age as age,
+		sex as sex
+		from
+		user_t 
+	</select>
+	
 </mapper>
