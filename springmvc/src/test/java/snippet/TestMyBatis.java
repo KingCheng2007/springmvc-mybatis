@@ -42,4 +42,15 @@ public class TestMyBatis {
 		// logger.info("值："+user.getUserName());
 		logger.info(JSON.toJSONString(user));
 	}
+	
+	public static void main(String[] args) {
+		String [] c = new String[5];
+		c[1] = "1";
+		c[2] = "2";
+		c[3] = "3";
+		c[4] = "4";
+		int k = 3;
+		System.out.println(c[k=4]);
+		System.out.println(k);
+	}
 }

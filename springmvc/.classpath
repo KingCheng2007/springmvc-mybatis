@@ -39,5 +39,8 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/httpclient-4.5.3.jar" sourcepath="D:/学习项目/httpClient/httpcomponents-client-4.5.3-src.zip"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/httpcore-4.4.6.jar" sourcepath="D:/学习项目/httpClient/httpcomponents-client-4.5.3-src.zip"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

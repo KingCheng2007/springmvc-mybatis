@@ -34,6 +34,8 @@ public class LogFilter implements Filter{
 			throws IOException, ServletException {
 		comingCount++;
 		ServletContext context = this.config.getServletContext() ;
+		String abc = context.getInitParameter("webAppRootKey");
+		System.out.println("webAppRootKey======"+abc);
 		long begin = System.currentTimeMillis();
 		//输出过滤信息
 		logger.info("开始过滤"+this.comingCount+"...");
